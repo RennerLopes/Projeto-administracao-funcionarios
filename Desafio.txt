@@ -1,0 +1,28 @@
+Desenvolver uma aplicação para administrar funcionários de uma empresa fictícia, onde:
+
+Funcionários devem possuir:
+
+- Nome e Sobrenome (obrigatório);
+- E-mail válido corporativo (obrigatório);
+- Número de chapa (único e obrigatório);
+- Telefone (não obrigatório / pode ter mais do que 1);
+- Nome do Líder (*um líder também é um funcionário);
+- Senha (deve ser armazenada criptografada)
+- <Pode agregar outros campos se fizerem sentido>;
+
+Para esta API, pede-se:
+
+- A criação de uma API Rest .net Core;
+- Adicionar as funcionalidades de CRUD;
+- Construção de um banco de dados para armazenamento;
+- Disponibilização do código no Github (até a data proposta).
+- Criação de um front para consumir a API;
+- Documentação da API.
+
+Desejável
+
+- Testes unitários;
+- Criação de containers/docker para solução;
+- Criar uma collection POSTMAN para consumir a API;
+- Aplicação de padrões de desenvolvimento;
+- Criar mecanismo de autenticação para consumir a API;

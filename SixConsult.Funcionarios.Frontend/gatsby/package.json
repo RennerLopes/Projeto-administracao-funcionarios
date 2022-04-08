@@ -1,0 +1,29 @@
+{
+  "name": "gatsby",
+  "version": "5.0.0",
+  "private": true,
+  "browserslist": [
+    ">0.25%",
+    "not dead"
+  ],
+  "proxy": "https://localhost:5001/",
+  "dependencies": {
+    "@emotion/react": "latest",
+    "@emotion/server": "latest",
+    "@emotion/styled": "^11.8.1",
+    "@mui/icons-material": "^5.6.0",
+    "@mui/material": "^5.2.8",
+    "@mui/x-data-grid": "^5.8.0",
+    "gatsby": "latest",
+    "gatsby-plugin-react-helmet": "latest",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.0",
+    "react-helmet": "latest"
+  },
+  "scripts": {
+    "develop": "gatsby develop",
+    "build": "gatsby build",
+    "serve": "gatsby serve",
+    "post-update": "echo \"codesandbox preview only, need an update\" && yarn upgrade --latest"
+  }
+}
