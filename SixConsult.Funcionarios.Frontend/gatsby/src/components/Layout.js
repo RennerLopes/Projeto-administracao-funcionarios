@@ -6,7 +6,7 @@ export default function Layout({ children }) {
   return (
     <div>
       <Header />
-      <Container maxWidth="md">{children}</Container>
+      <Container maxWidth="xl">{children}</Container>
     </div>
   );
 }

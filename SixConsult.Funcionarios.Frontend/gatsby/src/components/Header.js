@@ -11,7 +11,7 @@ import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
 import Link from './Link';
 
-const pages = ['listagem', 'adicionar'];
+const pages = ['adicionar'];
 
 const Header = () => {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -93,7 +93,6 @@ const Header = () => {
               </Link>
             ))}
           </Box>
-
         </Toolbar>
       </Container>
     </AppBar>

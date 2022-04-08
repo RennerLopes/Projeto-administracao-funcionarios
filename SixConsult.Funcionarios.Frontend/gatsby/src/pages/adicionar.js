@@ -10,6 +10,7 @@ import {
   Radio,
   RadioGroup,
   TextField,
+  Snackbar,
 } from '@mui/material';
 import { navigate } from 'gatsby';
 
@@ -21,6 +22,19 @@ export default function Adicionar() {
   } = useForm();
 
   const [valueRadio, setValueRadio] = React.useState('celular');
+  const [state, setState] = React.useState({
+    open: false,
+    vertical: 'top',
+    horizontal: 'center',
+  });
+  const { vertical, horizontal, open, message } = state;
+
+  // const handleClose = (event, reason) => {
+  //   if (reason === 'clickaway') {
+  //     return;
+  //   }
+  //   setOpen(false);
+  // };
 
   const handleChange = (event) => {
     setValueRadio(event.target.value);
@@ -49,9 +63,21 @@ export default function Adicionar() {
     })
       .then((msg) => {
         console.log('mensagem:' + JSON.stringify(msg));
+        setState({
+          vertical: 'top',
+          horizontal: 'right',
+          open: true,
+          message: 'Adicionado com sucesso!',
+        });
       })
       .catch((error) => {
         console.log(error);
+        setState({
+          vertical: 'top',
+          horizontal: 'right',
+          open: true,
+          message: 'Erro ao adicionar!',
+        });
       });
   };
 
@@ -182,12 +208,20 @@ export default function Adicionar() {
           size="large"
           fullWidth
           onClick={() => {
-            navigate('/listagem');
+            navigate('/');
           }}
         >
           Cancelar
         </Button>
       </form>
+      <Snackbar
+        anchorOrigin={{ vertical, horizontal }}
+        open={open}
+        autoHideDuration={6000}
+        // onClose={handleClose}
+        message={message}
+        key={vertical + horizontal}
+      ></Snackbar>
     </Layout>
   );
 }
